@@ -15,7 +15,6 @@ Loyning Cookbook is a family recipe database for the Loyning family. This app is
 
 ```
 git clone https://github.com/yourusername/loyning-cookbook.git
-
 ```
 
 2. Change to the project directory
@@ -74,8 +73,3 @@ Follow the instructions in the [Create React App deployment guide](https://creat
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-```
-
-You can add this `README.md` file to your project's root directory. Replace the `yourusername` in the `git clone` command with your actual GitHub username.
-```
