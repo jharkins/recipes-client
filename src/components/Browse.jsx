@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import RecipeTable from "./RecipeTable";
 import { Container, Pagination, Form, Row, Col } from "react-bootstrap";
-
-const API_URL = "http://localhost:8080";
+import { API_URL } from "../config";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 

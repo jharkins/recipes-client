@@ -1,14 +1,12 @@
 import React from "react";
 import useSWR from "swr";
 import RecipeCard from "./RecipeCard";
+import { API_URL } from "../config";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Random = () => {
-  const { data, error } = useSWR(
-    "http://localhost:8080/api/recipe/random",
-    fetcher
-  );
+  const { data, error } = useSWR(`${API_URL}/api/recipe/random`, fetcher);
 
   if (error) {
     return <div>Error: {error.message}</div>;
