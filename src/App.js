@@ -11,8 +11,7 @@ import "./App.css";
 import Random from "./components/Random";
 import Recipe from "./components/Recipe";
 import Browse from "./components/Browse";
-
-const Search = () => <span>Search Widget Here</span>;
+import Search from "./components/Search";
 
 const Layout = () => (
   <Container fluid>
@@ -28,8 +27,8 @@ const Layout = () => (
       <Col>
         <Container className="mt-2">
           <Routes>
-            <Route path="/browse" element={<Browse />} />
-            <Route path="/" element={<Random />} />
+            <Route path="/" element={<Browse />} />
+            <Route path="/random" element={<Random />} />
             <Route path="/search" element={<Search />} />
             <Route path="/recipe/:id" exact element={<Recipe />} />
           </Routes>

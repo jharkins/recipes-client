@@ -4,6 +4,15 @@ import { Card, Badge } from "react-bootstrap";
 const RecipeCard = (props) => {
   const { recipe } = props;
 
+  const formatText = (text) => {
+    return text.split("\r\n").map((str, index) => (
+      <span key={index}>
+        {str}
+        <br />
+      </span>
+    ));
+  };
+
   return (
     <Card className="mb-4">
       <Card.Header>
@@ -18,12 +27,12 @@ const RecipeCard = (props) => {
         <Card.Text>
           <strong>Ingredients:</strong>
           <br />
-          {recipe.ingredients}
+          {formatText(recipe.ingredients)}
         </Card.Text>
         <Card.Text>
           <strong>Description:</strong>
           <br />
-          {recipe.description}
+          {formatText(recipe.description)}
         </Card.Text>
         <Card.Text>
           <strong>Prep Time:</strong> {recipe.prep_time} |{" "}
@@ -35,7 +44,7 @@ const RecipeCard = (props) => {
         <Card.Text>
           <strong>Notes:</strong>
           <br />
-          {recipe.notes}
+          {formatText(recipe.notes)}
         </Card.Text>
         <Card.Text>
           <strong>Serving Size:</strong> {recipe.serving_size}
